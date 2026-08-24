@@ -31,7 +31,7 @@ const PILLARS = [
 
 export function Pillars() {
   return (
-    <section id="roster" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-6 pb-20">
+    <section id="services" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-6 pb-20">
       {PILLARS.map((pillar, i) => (
         <motion.div
           key={i}

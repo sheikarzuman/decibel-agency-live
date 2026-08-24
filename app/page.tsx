@@ -1,5 +1,6 @@
 import { About } from "@/components/About";
 import { Contact } from "@/components/Contact";
+import { CreatorRoster } from "@/components/CreatorRoster";
 import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
 import { Navbar } from "@/components/Navbar";
@@ -12,6 +13,7 @@ export default function Home() {
       <main className="relative">
         <Hero />
         <Pillars />
+        <CreatorRoster />
         <About />
         <Contact />
       </main>

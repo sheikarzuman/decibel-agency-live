@@ -40,6 +40,7 @@ export function Navbar() {
         </a>
 
         <div className="hidden md:flex items-center gap-6 text-xs tracking-wider uppercase text-foreground-muted">
+          <a href="#roster" className="hover:text-white transition-colors duration-150">Roster</a>
           <a href="#ugc" className="hover:text-white transition-colors duration-150">UGC Studio</a>
           <a href="#performance" className="hover:text-white transition-colors duration-150">ROI Analytics</a>
           <a href="#about" className="hover:text-white transition-colors duration-150">Leadership</a>
