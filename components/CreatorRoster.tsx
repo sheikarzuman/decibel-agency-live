@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import { motion } from "motion/react";
 import { MessageCircle } from "lucide-react";
 
@@ -34,6 +35,7 @@ const CREATORS = [
   {
     name: "Gagana",
     handle: "@gagana._xo",
+    photo: "/gagana.jpg",
     instagram: "https://www.instagram.com/gagana._xo/",
     whatsapp:
       "https://wa.me/916369411388?text=" +
@@ -46,13 +48,13 @@ const CREATORS = [
 export function CreatorRoster() {
   return (
     <section id="roster" className="px-6 py-24 sm:py-32">
-      <div className="mx-auto max-w-2xl">
+      <div className="mx-auto max-w-5xl">
         <div className="text-center">
           <p className="eyebrow-text text-foreground-muted">From the Roster</p>
           <h2 className="display-title-sm mt-3 text-white">Featured Creator</h2>
         </div>
 
-        <div className="mt-10 flex flex-col gap-5">
+        <div className="mt-10 flex flex-wrap justify-center gap-6">
           {CREATORS.map((creator) => (
             <motion.div
               key={creator.handle}
@@ -60,41 +62,54 @@ export function CreatorRoster() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={springSettle}
-              whileHover={{ y: -4 }}
-              className="apple-glass flex flex-col items-center gap-5 rounded-3xl p-8 text-center sm:flex-row sm:text-left"
+              className="apple-glass flex w-full max-w-xs flex-col overflow-hidden rounded-3xl sm:max-w-sm"
             >
-              <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-white/10 text-xl font-semibold text-white">
-                {creator.name.slice(0, 2).toUpperCase()}
+              <div className="relative aspect-[3/4] w-full overflow-hidden">
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  transition={springSettle}
+                  className="absolute inset-0"
+                >
+                  <Image
+                    src={creator.photo}
+                    alt={creator.name}
+                    fill
+                    sizes="(max-width: 640px) 20rem, 24rem"
+                    className="object-cover"
+                  />
+                </motion.div>
               </div>
 
-              <div className="flex-1">
-                <h3 className="text-lg font-semibold text-white">{creator.name}</h3>
-                <p className="text-sm text-foreground-muted">{creator.handle}</p>
-              </div>
+              <div className="flex flex-col items-center gap-4 p-6 text-center">
+                <div>
+                  <h3 className="text-lg font-semibold text-white">{creator.name}</h3>
+                  <p className="text-sm text-foreground-muted">{creator.handle}</p>
+                </div>
 
-              <div className="flex shrink-0 flex-wrap items-center justify-center gap-3">
-                <motion.a
-                  href={creator.instagram}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  whileTap={{ scale: 0.96 }}
-                  transition={springTap}
-                  className="apple-glass flex items-center gap-2 rounded-full px-4 py-2 text-xs font-medium text-white hover:bg-white/10 transition-colors"
-                >
-                  <InstagramIcon size={14} />
-                  Instagram
-                </motion.a>
-                <motion.a
-                  href={creator.whatsapp}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  whileTap={{ scale: 0.96 }}
-                  transition={springTap}
-                  className="flex items-center gap-2 rounded-full bg-white px-4 py-2 text-xs font-semibold text-black"
-                >
-                  <MessageCircle size={14} />
-                  Book on WhatsApp
-                </motion.a>
+                <div className="flex flex-wrap items-center justify-center gap-3">
+                  <motion.a
+                    href={creator.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileTap={{ scale: 0.96 }}
+                    transition={springTap}
+                    className="apple-glass flex items-center gap-2 rounded-full px-4 py-2 text-xs font-medium text-white hover:bg-white/10 transition-colors"
+                  >
+                    <InstagramIcon size={14} />
+                    Instagram
+                  </motion.a>
+                  <motion.a
+                    href={creator.whatsapp}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileTap={{ scale: 0.96 }}
+                    transition={springTap}
+                    className="flex items-center gap-2 rounded-full bg-white px-4 py-2 text-xs font-semibold text-black"
+                  >
+                    <MessageCircle size={14} />
+                    Book on WhatsApp
+                  </motion.a>
+                </div>
               </div>
             </motion.div>
           ))}
