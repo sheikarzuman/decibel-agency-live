@@ -52,7 +52,7 @@ const CREATORS: Creator[] = [
   {
     name: "Gagana",
     handle: "@gagana._xo",
-    location: "Hyderabad, India",
+    location: "Hyderabad / Coimbatore",
     photo: "/gagana.jpg",
     instagram: "https://www.instagram.com/gagana._xo/",
     whatsapp: bookingLink("Gagana", "@gagana._xo"),
@@ -60,7 +60,7 @@ const CREATORS: Creator[] = [
   {
     name: "Juhi Murugeshan",
     handle: "@juhi.murugeshan",
-    location: "Pune, India",
+    location: "Pune / Coimbatore",
     category: "Lifestyle • Creator • Visuals",
     photo: "/juhi.jpg",
     instagram: "https://www.instagram.com/juhi.murugeshan/",
