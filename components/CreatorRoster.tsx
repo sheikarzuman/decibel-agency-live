@@ -31,18 +31,40 @@ const springSettle = { type: "spring", bounce: 0, duration: 0.4 } as const;
 // Slight bounce reserved for the interactive tap itself.
 const springTap = { type: "spring", bounce: 0.2, duration: 0.25 } as const;
 
-const CREATORS = [
+type Creator = {
+  name: string;
+  handle: string;
+  location: string;
+  category?: string;
+  photo: string;
+  instagram: string;
+  whatsapp: string;
+};
+
+function bookingLink(name: string, handle: string) {
+  return (
+    "https://wa.me/916369411388?text=" +
+    encodeURIComponent(`Hi Decibel Team, I'd like to book ${name} (${handle}) for a campaign.`)
+  );
+}
+
+const CREATORS: Creator[] = [
   {
     name: "Gagana",
     handle: "@gagana._xo",
     location: "Hyderabad, India",
     photo: "/gagana.jpg",
     instagram: "https://www.instagram.com/gagana._xo/",
-    whatsapp:
-      "https://wa.me/916369411388?text=" +
-      encodeURIComponent(
-        "Hi Decibel Team, I'd like to book Gagana (@gagana._xo) for a campaign."
-      ),
+    whatsapp: bookingLink("Gagana", "@gagana._xo"),
+  },
+  {
+    name: "Juhi Murugeshan",
+    handle: "@juhi.murugeshan",
+    location: "Pune, India",
+    category: "Lifestyle • Creator • Visuals",
+    photo: "/juhi.jpg",
+    instagram: "https://www.instagram.com/juhi.murugeshan/",
+    whatsapp: bookingLink("Juhi Murugeshan", "@juhi.murugeshan"),
   },
 ];
 
@@ -52,10 +74,10 @@ export function CreatorRoster() {
       <div className="mx-auto max-w-5xl">
         <div className="text-center">
           <p className="eyebrow-text text-foreground-muted">From the Roster</p>
-          <h2 className="display-title-sm mt-3 text-white">Featured Creator</h2>
+          <h2 className="display-title-sm mt-3 text-white">Featured Creators</h2>
         </div>
 
-        <div className="mt-10 flex flex-wrap justify-center gap-6">
+        <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-6 sm:grid-cols-2">
           {CREATORS.map((creator) => (
             <motion.div
               key={creator.handle}
@@ -63,7 +85,7 @@ export function CreatorRoster() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={springSettle}
-              className="apple-glass flex w-full max-w-xs flex-col overflow-hidden rounded-3xl sm:max-w-sm"
+              className="apple-glass flex w-full flex-col overflow-hidden rounded-3xl"
             >
               <div className="relative aspect-[3/4] w-full overflow-hidden">
                 <motion.div
@@ -86,6 +108,9 @@ export function CreatorRoster() {
                   <h3 className="text-lg font-semibold text-white">{creator.name}</h3>
                   <p className="text-sm text-foreground-muted">{creator.handle}</p>
                   <p className="mt-1 text-xs text-foreground-muted/70">{creator.location}</p>
+                  {creator.category && (
+                    <p className="eyebrow-text mt-2 text-foreground-muted">{creator.category}</p>
+                  )}
                 </div>
 
                 <div className="flex flex-wrap items-center justify-center gap-3">
