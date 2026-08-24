@@ -35,7 +35,7 @@ const CREATORS = [
   {
     name: "Gagana",
     handle: "@gagana._xo",
-    location: "Bengaluru, India",
+    location: "Hyderabad, India",
     photo: "/gagana.jpg",
     instagram: "https://www.instagram.com/gagana._xo/",
     whatsapp:
