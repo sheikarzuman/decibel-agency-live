@@ -101,23 +101,44 @@ export default function ContactPage() {
             </motion.a>
           </div>
 
-          {/* Email Card */}
+          {/* Email Card — Sheik */}
           <div className="apple-glass rounded-2xl p-6 border border-white/10">
             <div className="flex items-center gap-3 mb-3">
               <div className="h-9 w-9 rounded-lg bg-white/10 flex items-center justify-center text-white">
                 <Mail size={18} />
               </div>
               <div>
-                <h3 className="text-sm font-semibold text-white">Formal Briefs & RFPs</h3>
-                <p className="text-xs text-foreground-muted">Send pitch decks and deliverables</p>
+                <h3 className="text-sm font-semibold text-white">Sheik Arzuman</h3>
+                <p className="text-xs text-foreground-muted">Co-Founder & Managing Partner</p>
               </div>
             </div>
             <motion.a
-              href="mailto:decible.creative.in@gmail.com"
+              href="mailto:sheik@decibel.co"
               whileTap={{ scale: 0.97 }}
               className="mt-2 w-full bg-white/5 border border-white/10 hover:border-white/20 text-white text-xs font-medium py-2.5 px-4 rounded-xl flex items-center justify-between transition-colors"
             >
-              <span>decible.creative.in@gmail.com</span>
+              <span>sheik@decibel.co</span>
+              <ArrowUpRight size={14} className="text-foreground-muted" />
+            </motion.a>
+          </div>
+
+          {/* Email Card — Anu */}
+          <div className="apple-glass rounded-2xl p-6 border border-white/10">
+            <div className="flex items-center gap-3 mb-3">
+              <div className="h-9 w-9 rounded-lg bg-white/10 flex items-center justify-center text-white">
+                <Mail size={18} />
+              </div>
+              <div>
+                <h3 className="text-sm font-semibold text-white">Anu Suresh</h3>
+                <p className="text-xs text-foreground-muted">Co-Founder & Creative Director</p>
+              </div>
+            </div>
+            <motion.a
+              href="mailto:anu@decibel.co"
+              whileTap={{ scale: 0.97 }}
+              className="mt-2 w-full bg-white/5 border border-white/10 hover:border-white/20 text-white text-xs font-medium py-2.5 px-4 rounded-xl flex items-center justify-between transition-colors"
+            >
+              <span>anu@decibel.co</span>
               <ArrowUpRight size={14} className="text-foreground-muted" />
             </motion.a>
           </div>

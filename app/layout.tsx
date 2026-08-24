@@ -29,6 +29,10 @@ export const metadata: Metadata = {
     description: SITE_DESCRIPTION,
     images: ["/logo.png"],
   },
+  other: {
+    "contact:sheik": "sheik@decibel.co",
+    "contact:anu": "anu@decibel.co",
+  },
 };
 
 export const viewport: Viewport = {

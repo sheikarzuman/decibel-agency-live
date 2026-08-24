@@ -46,7 +46,7 @@ export function Contact() {
         message,
       ].join("\n")
     );
-    window.location.href = `mailto:decible.creative.in@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:sheik@decibel.co?subject=${subject}&body=${body}`;
   }
 
   return (

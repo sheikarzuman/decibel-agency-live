@@ -14,10 +14,16 @@ export function Footer() {
 
         <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-[13px] text-foreground-muted">
           <a
-            href="mailto:decible.creative.in@gmail.com"
+            href="mailto:sheik@decibel.co"
             className="transition-colors duration-150 hover:text-white"
           >
-            decible.creative.in@gmail.com
+            Sheik Arzuman: sheik@decibel.co
+          </a>
+          <a
+            href="mailto:anu@decibel.co"
+            className="transition-colors duration-150 hover:text-white"
+          >
+            Anu Suresh: anu@decibel.co
           </a>
           <a
             href="https://wa.me/916369411388"

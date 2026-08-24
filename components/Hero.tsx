@@ -39,7 +39,7 @@ export function Hero() {
         transition={{ delay: 0.15, duration: 0.4 }}
       >
         <motion.a
-          href="mailto:decible.creative.in@gmail.com"
+          href="mailto:sheik@decibel.co"
           whileTap={{ scale: 0.96 }}
           className="bg-white text-black font-medium text-sm px-6 py-3 rounded-full flex items-center gap-2 shadow-lg hover:bg-[#e8e8ed] transition-colors"
         >
