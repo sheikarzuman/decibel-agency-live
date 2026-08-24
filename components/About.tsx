@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import { motion } from "motion/react";
 
 const FOUNDERS = [
@@ -7,6 +8,8 @@ const FOUNDERS = [
     name: "Sheik Arzuman",
     role: "Co-Founder & Managing Partner",
     initials: "SA",
+    photo: "/sheik.jpg",
+    email: "sheik@decibel.co",
     badge: "Operations & Systems",
     desc: "B.Tech graduate with engineering background in backend development and agentic AI architectures. Translates technical precision into high-throughput campaign operations, creator tracking, and quantified performance metrics."
   },
@@ -47,9 +50,21 @@ export function About() {
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <div className="h-12 w-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center font-medium text-sm text-white">
-                    {founder.initials}
-                  </div>
+                  {founder.photo ? (
+                    <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full border border-white/10">
+                      <Image
+                        src={founder.photo}
+                        alt={founder.name}
+                        fill
+                        sizes="48px"
+                        className="object-cover"
+                      />
+                    </div>
+                  ) : (
+                    <div className="h-12 w-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center font-medium text-sm text-white">
+                      {founder.initials}
+                    </div>
+                  )}
                   <span className="text-[11px] font-medium tracking-wide uppercase px-3 py-1 rounded-full bg-white/10 text-white border border-white/20">
                     {founder.badge}
                   </span>
@@ -57,6 +72,14 @@ export function About() {
                 <h3 className="text-lg font-semibold text-white tracking-tight">{founder.name}</h3>
                 <p className="text-xs font-medium text-foreground-muted uppercase tracking-wider mt-1">{founder.role}</p>
                 <p className="text-sm text-foreground-muted mt-4 leading-relaxed">{founder.desc}</p>
+                {founder.email && (
+                  <a
+                    href={`mailto:${founder.email}`}
+                    className="mt-4 inline-block text-xs text-foreground-muted hover:text-white transition-colors"
+                  >
+                    {founder.email}
+                  </a>
+                )}
               </div>
             </motion.div>
           ))}
