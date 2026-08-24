@@ -9,7 +9,7 @@ export function Footer() {
         </span>
 
         <p className="text-[13px] text-foreground-muted">
-          Influencer Marketing &amp; UGC Agency &middot; South India
+          Influencer Marketing &amp; UGC Agency
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-[13px] text-foreground-muted">
@@ -35,7 +35,7 @@ export function Footer() {
           >
             @decibel.co.in
           </a>
-          <span>Bengaluru &middot; Coimbatore &middot; Chennai</span>
+          <span>India</span>
         </div>
 
         <p className="text-[12px] text-foreground-muted/70">

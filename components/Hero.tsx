@@ -13,21 +13,21 @@ export function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ type: "spring", bounce: 0, duration: 0.5 }}
       >
-        {/* Regional Badge */}
+        {/* Service Badge */}
         <div className="inline-flex items-center gap-2 apple-glass px-4 py-1.5 rounded-full text-xs font-medium text-foreground-muted mb-8">
           <span className="h-1.5 w-1.5 rounded-full bg-white" />
-          <span>Chennai • Bengaluru • Hyderabad • Kochi • Coimbatore</span>
+          <span>Influencer Marketing • Talent Management • UGC Studio</span>
         </div>
 
         {/* Display Headline */}
         <h1 className="display-title font-semibold text-white">
           <span className="text-foreground-muted">Creator marketing,</span> <br />
-          tuned to South India.
+          engineered for brand growth.
         </h1>
 
         {/* Subhead with UGC and Influencer Agency Positioning */}
         <p className="body-text text-base md:text-lg text-foreground-muted max-w-2xl mx-auto mt-6 leading-relaxed">
-          Decibel is a dedicated influencer marketing and UGC agency. We pair high-converting regional creator rosters with structured campaign execution and verified ROI analytics for modern brands.
+          Decibel is a dedicated creator marketing and talent agency. We engineer high-converting creator campaigns, authentic UGC production, and verified performance attribution for modern brands.
         </p>
       </motion.div>
 

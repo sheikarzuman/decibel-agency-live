@@ -13,7 +13,7 @@ const PILLARS = [
   {
     icon: Target,
     title: "Influencer Strategy",
-    desc: "Direct access to vetted lifestyle, fashion, and tech creators across South India with zero middleman markup."
+    desc: "Direct access to vetted lifestyle, fashion, and tech creators with zero middleman markup."
   },
   {
     id: "ugc",

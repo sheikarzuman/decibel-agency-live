@@ -1,9 +1,9 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
-const SITE_TITLE = "Decibel | Influencer Marketing & UGC Agency • South India";
+const SITE_TITLE = "Decibel | Influencer Marketing & UGC Agency";
 const SITE_DESCRIPTION =
-  "Creator campaigns, high-converting UGC studio production, and quantified ROI attribution across Bengaluru, Chennai, Hyderabad, Kochi, and Coimbatore.";
+  "Creator campaigns, high-converting UGC studio production, and quantified ROI attribution for modern brands.";
 
 export const metadata: Metadata = {
   title: SITE_TITLE,

@@ -35,6 +35,7 @@ const CREATORS = [
   {
     name: "Gagana",
     handle: "@gagana._xo",
+    location: "Bengaluru, India",
     photo: "/gagana.jpg",
     instagram: "https://www.instagram.com/gagana._xo/",
     whatsapp:
@@ -84,6 +85,7 @@ export function CreatorRoster() {
                 <div>
                   <h3 className="text-lg font-semibold text-white">{creator.name}</h3>
                   <p className="text-sm text-foreground-muted">{creator.handle}</p>
+                  <p className="mt-1 text-xs text-foreground-muted/70">{creator.location}</p>
                 </div>
 
                 <div className="flex flex-wrap items-center justify-center gap-3">

@@ -63,7 +63,7 @@ export default function ContactPage() {
             breakout campaign.
           </h1>
           <p className="body-text text-base text-foreground-muted max-w-xl mx-auto mt-4">
-            Whether you need high-converting UGC reels or a full-scale South Indian creator deployment, our team is ready to execute.
+            Whether you need high-converting UGC reels or a full-scale creator deployment, our team is ready to execute.
           </p>
         </motion.div>
       </section>
@@ -145,10 +145,10 @@ export default function ContactPage() {
             </motion.a>
           </div>
 
-          {/* Regional Hubs */}
+          {/* Coverage */}
           <div className="apple-glass rounded-2xl p-6 border border-white/10 text-xs text-foreground-muted flex items-center gap-3">
             <MapPin size={18} className="text-white shrink-0" />
-            <span>Serving leading brands across Bengaluru, Chennai, Coimbatore, Hyderabad & Kochi.</span>
+            <span>Serving leading brands nationwide.</span>
           </div>
         </motion.div>
 
