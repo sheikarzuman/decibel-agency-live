@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "motion/react";
-import { MessageCircle } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 // lucide-react dropped brand/logo icons (incl. Instagram) — inline glyph instead,
 // matching the same stroke-based style as the rest of the icon set.
@@ -26,121 +26,108 @@ function InstagramIcon({ size = 16, className }: { size?: number; className?: st
   );
 }
 
-// Critically damped default — smooth settle, no overshoot.
-const springSettle = { type: "spring", bounce: 0, duration: 0.4 } as const;
-// Slight bounce reserved for the interactive tap itself.
-const springTap = { type: "spring", bounce: 0.2, duration: 0.25 } as const;
-
-type Creator = {
-  name: string;
-  handle: string;
-  location: string;
-  category?: string;
-  photo: string;
-  instagram: string;
-  whatsapp: string;
-};
-
-function bookingLink(name: string, handle: string) {
-  return (
-    "https://wa.me/916369411388?text=" +
-    encodeURIComponent(`Hi Decibel Team, I'd like to book ${name} (${handle}) for a campaign.`)
-  );
-}
-
-const CREATORS: Creator[] = [
+const CREATORS = [
   {
     name: "Gagana",
     handle: "@gagana._xo",
-    location: "Hyderabad / Coimbatore",
-    photo: "/gagana.jpg",
-    instagram: "https://www.instagram.com/gagana._xo/",
-    whatsapp: bookingLink("Gagana", "@gagana._xo"),
+    image: "/gagana.jpg",
+    url: "https://www.instagram.com/gagana._xo/",
+    category: "Fashion • Lifestyle • Beauty",
+    location: "Bengaluru",
+    bio: "Curating high-aesthetic fashion, everyday style essentials, and authentic lifestyle storytelling for contemporary consumer brands."
   },
   {
     name: "Juhi Murugeshan",
     handle: "@juhi.murugeshan",
-    location: "Pune / Coimbatore",
+    image: "/juhi.jpg",
+    url: "https://www.instagram.com/juhi.murugeshan/",
     category: "Lifestyle • Creator • Visuals",
-    photo: "/juhi.jpg",
-    instagram: "https://www.instagram.com/juhi.murugeshan/",
-    whatsapp: bookingLink("Juhi Murugeshan", "@juhi.murugeshan"),
+    location: "Pune",
+    bio: "Creating visually engaging lifestyle content, aesthetic brand showcases, and high-retention creator formats for modern audiences."
   },
+  {
+    name: "Rishi",
+    handle: "@ii_imrishi_.xo",
+    image: "/rishi.jpg",
+    url: "https://www.instagram.com/ii_imrishi_.xo",
+    category: "Fashion • Lifestyle • Visuals",
+    location: "India",
+    bio: "Creating high-impact fashion edits, everyday aesthetic style, and engaging lifestyle storytelling for forward-thinking brands."
+  }
 ];
 
 export function CreatorRoster() {
   return (
-    <section id="roster" className="px-6 py-24 sm:py-32">
-      <div className="mx-auto max-w-5xl">
-        <div className="text-center">
-          <p className="eyebrow-text text-foreground-muted">From the Roster</p>
-          <h2 className="display-title-sm mt-3 text-white">Featured Creators</h2>
-        </div>
+    <section id="roster" className="pt-8 pb-20 max-w-5xl mx-auto px-4">
+      {/* Section Header */}
+      <div className="text-center mb-12">
+        <span className="text-xs uppercase tracking-widest text-neutral-400 font-medium">
+          Talent Roster
+        </span>
+        <h2 className="text-2xl md:text-3xl font-semibold text-white mt-2 tracking-tight">
+          Exclusively managed & represented creators.
+        </h2>
+      </div>
 
-        <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-6 sm:grid-cols-2">
-          {CREATORS.map((creator) => (
-            <motion.div
-              key={creator.handle}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={springSettle}
-              className="apple-glass flex w-full flex-col overflow-hidden rounded-3xl"
-            >
-              <div className="relative aspect-[3/4] w-full overflow-hidden">
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  transition={springSettle}
-                  className="absolute inset-0"
-                >
-                  <Image
-                    src={creator.photo}
-                    alt={creator.name}
-                    fill
-                    sizes="(max-width: 640px) 20rem, 24rem"
-                    className="object-cover"
-                  />
-                </motion.div>
-              </div>
-
-              <div className="flex flex-col items-center gap-4 p-6 text-center">
-                <div>
-                  <h3 className="text-lg font-semibold text-white">{creator.name}</h3>
-                  <p className="text-sm text-foreground-muted">{creator.handle}</p>
-                  <p className="mt-1 text-xs text-foreground-muted/70">{creator.location}</p>
-                  {creator.category && (
-                    <p className="eyebrow-text mt-2 text-foreground-muted">{creator.category}</p>
-                  )}
-                </div>
-
-                <div className="flex flex-wrap items-center justify-center gap-3">
-                  <motion.a
-                    href={creator.instagram}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileTap={{ scale: 0.96 }}
-                    transition={springTap}
-                    className="apple-glass flex items-center gap-2 rounded-full px-4 py-2 text-xs font-medium text-white hover:bg-white/10 transition-colors"
-                  >
-                    <InstagramIcon size={14} />
-                    Instagram
-                  </motion.a>
-                  <motion.a
-                    href={creator.whatsapp}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileTap={{ scale: 0.96 }}
-                    transition={springTap}
-                    className="flex items-center gap-2 rounded-full bg-white px-4 py-2 text-xs font-semibold text-black"
-                  >
-                    <MessageCircle size={14} />
-                    Book on WhatsApp
-                  </motion.a>
+      {/* 3-Column Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        {CREATORS.map((creator, i) => (
+          <motion.div
+            key={creator.handle}
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ type: "spring", bounce: 0, duration: 0.4, delay: i * 0.08 }}
+            whileHover={{ y: -4 }}
+            className="apple-glass rounded-2xl p-4 flex flex-col justify-between group overflow-hidden"
+          >
+            <div>
+              {/* Creator Image Card */}
+              <div className="relative aspect-[3/4] w-full rounded-xl overflow-hidden mb-4 bg-neutral-900 border border-white/10">
+                <Image
+                  src={creator.image}
+                  alt={creator.name}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 320px"
+                  priority={i === 0}
+                  className="object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out"
+                />
+                <div className="absolute top-3 right-3 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-full text-[10px] font-medium text-white border border-white/10 tracking-wide uppercase">
+                  {creator.location}
                 </div>
               </div>
-            </motion.div>
-          ))}
-        </div>
+
+              {/* Creator Info */}
+              <h3 className="text-lg font-semibold text-white tracking-tight">{creator.name}</h3>
+              <p className="text-xs font-medium text-neutral-400 mt-0.5">{creator.category}</p>
+              <p className="text-xs text-[#8e8e93] mt-3 leading-relaxed">{creator.bio}</p>
+            </div>
+
+            {/* Actions */}
+            <div className="mt-5 pt-3.5 border-t border-white/5 flex items-center justify-between">
+              <motion.a
+                href={creator.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                whileTap={{ scale: 0.96 }}
+                className="inline-flex items-center gap-1.5 text-xs font-medium text-white hover:text-neutral-300 transition-colors"
+              >
+                <InstagramIcon size={14} />
+                <span>{creator.handle}</span>
+                <ArrowUpRight size={13} className="text-neutral-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              </motion.a>
+
+              <a
+                href={`https://wa.me/916369411388?text=Hi%20Decibel%2C%20we%20want%20to%20collaborate%20with%20${encodeURIComponent(creator.name)}%20(${encodeURIComponent(creator.handle)})`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[11px] font-semibold text-black bg-white px-3.5 py-1.5 rounded-full hover:bg-neutral-200 transition-colors"
+              >
+                Book
+              </a>
+            </div>
+          </motion.div>
+        ))}
       </div>
     </section>
   );
