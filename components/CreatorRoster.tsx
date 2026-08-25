@@ -33,7 +33,7 @@ const CREATORS = [
     image: "/gagana.jpg",
     url: "https://www.instagram.com/gagana._xo/",
     category: "Fashion • Lifestyle • Beauty",
-    location: "Bengaluru",
+    location: "Hyderabad",
     bio: "Curating high-aesthetic fashion, everyday style essentials, and authentic lifestyle storytelling for contemporary consumer brands."
   },
   {
@@ -51,7 +51,7 @@ const CREATORS = [
     image: "/rishi.jpg",
     url: "https://www.instagram.com/ii_imrishi_.xo",
     category: "Fashion • Lifestyle • Visuals",
-    location: "India",
+    location: "Coimbatore",
     bio: "Creating high-impact fashion edits, everyday aesthetic style, and engaging lifestyle storytelling for forward-thinking brands."
   }
 ];
