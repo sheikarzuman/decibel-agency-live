@@ -17,6 +17,7 @@ const FOUNDERS = [
     name: "Anu Suresh",
     role: "Co-Founder & Creative Director",
     initials: "AS",
+    photo: "/anu.jpg",
     email: "anu@decibel.co",
     badge: "Creative & Brand Strategy",
     desc: "Brings 6+ years of experience in social media management and entrepreneurship, alongside 1+ years of dedicated influencer marketing experience directing talent and high-impact campaigns for leading consumer brands including Amazon, Flipkart, and Lifestyle."
