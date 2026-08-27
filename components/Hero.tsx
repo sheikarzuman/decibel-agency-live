@@ -2,12 +2,22 @@
 import React from "react";
 import { motion, useReducedMotion } from "motion/react";
 import { ArrowUpRight, MessageCircle } from "lucide-react";
+import dynamic from "next/dynamic";
+
+// Lazy-loaded, client-only, and never blocks Hero's initial paint — this is a
+// purely decorative, ambient background layer (see HeroBackground.tsx).
+const HeroBackground = dynamic(() => import("./HeroBackground"), {
+  ssr: false,
+  loading: () => null,
+});
 
 export function Hero() {
   const shouldReduceMotion = useReducedMotion();
 
   return (
-    <section className="text-center pt-24 pb-20 max-w-4xl mx-auto">
+    <section className="relative text-center pt-24 pb-20 max-w-4xl mx-auto">
+      <HeroBackground />
+
       <motion.div
         initial={{ opacity: 0, y: shouldReduceMotion ? 0 : 15 }}
         animate={{ opacity: 1, y: 0 }}
