@@ -36,6 +36,9 @@ yarn-error.log*
 # vercel
 .vercel
 
+# local design-research scrape artifacts (third-party screenshots/data — never ship these)
+/.firecrawl/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

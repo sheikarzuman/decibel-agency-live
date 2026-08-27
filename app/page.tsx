@@ -4,7 +4,8 @@ import { CreatorRoster } from "@/components/CreatorRoster";
 import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
 import { Navbar } from "@/components/Navbar";
-import { Pillars } from "@/components/Pillars";
+import { Performance } from "@/components/Performance";
+import { Services } from "@/components/Services";
 
 export default function Home() {
   return (
@@ -12,8 +13,9 @@ export default function Home() {
       <Navbar />
       <main className="relative">
         <Hero />
-        <Pillars />
+        <Services />
         <CreatorRoster />
+        <Performance />
         <About />
         <Contact />
       </main>

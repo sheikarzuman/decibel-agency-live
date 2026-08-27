@@ -200,7 +200,7 @@ export default function ContactPage() {
                       placeholder="e.g. Rahul Sharma"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-white transition-colors"
+                      className="apple-glass w-full rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-500 outline-none transition-colors focus:border-accent/50"
                     />
                   </div>
                   <div>
@@ -211,7 +211,7 @@ export default function ContactPage() {
                       placeholder="e.g. Acme Lifestyle"
                       value={formData.brand}
                       onChange={(e) => setFormData({ ...formData, brand: e.target.value })}
-                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-white transition-colors"
+                      className="apple-glass w-full rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-500 outline-none transition-colors focus:border-accent/50"
                     />
                   </div>
                 </div>
@@ -225,7 +225,7 @@ export default function ContactPage() {
                       placeholder="@yourbrand or domain.com"
                       value={formData.handle}
                       onChange={(e) => setFormData({ ...formData, handle: e.target.value })}
-                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-white transition-colors"
+                      className="apple-glass w-full rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-500 outline-none transition-colors focus:border-accent/50"
                     />
                   </div>
                   <div>
@@ -236,7 +236,7 @@ export default function ContactPage() {
                       placeholder="+91 98765 43210 / brand@domain.com"
                       value={formData.contact}
                       onChange={(e) => setFormData({ ...formData, contact: e.target.value })}
-                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-white transition-colors"
+                      className="apple-glass w-full rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-500 outline-none transition-colors focus:border-accent/50"
                     />
                   </div>
                 </div>
@@ -247,7 +247,7 @@ export default function ContactPage() {
                     <select
                       value={formData.service}
                       onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                      className="w-full bg-[#121216] border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-white"
+                      className="w-full rounded-xl border border-white/10 bg-[#121216] px-4 py-3 text-sm text-white outline-none transition-colors focus:border-accent/50"
                     >
                       <option value="Influencer Marketing">Influencer Marketing Campaign</option>
                       <option value="UGC Video Studio">UGC Video Production</option>
@@ -259,7 +259,7 @@ export default function ContactPage() {
                     <select
                       value={formData.budget}
                       onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
-                      className="w-full bg-[#121216] border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-white"
+                      className="w-full rounded-xl border border-white/10 bg-[#121216] px-4 py-3 text-sm text-white outline-none transition-colors focus:border-accent/50"
                     >
                       <option value="< ₹50,000">&lt; ₹50,000 (Sprint Pilot)</option>
                       <option value="₹50,000 - ₹1,50,000">₹50,000 – ₹1,50,000 (Growth)</option>
@@ -275,7 +275,7 @@ export default function ContactPage() {
                     placeholder="Tell us about target audience, timeline, or specific creative requirements..."
                     value={formData.notes}
                     onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-white transition-colors"
+                    className="apple-glass w-full rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-500 outline-none transition-colors focus:border-accent/50"
                   />
                 </div>
 
