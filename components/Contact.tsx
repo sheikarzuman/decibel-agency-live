@@ -50,12 +50,12 @@ export function Contact() {
   }
 
   return (
-    <section id="contact" className="px-6 py-24 sm:py-32">
+    <section id="contact" className="px-6 py-28 sm:py-40">
       <div className="mx-auto max-w-2xl">
         <div className="text-center">
           <p className="eyebrow-text text-accent">Get in touch</p>
           <h2 className="display-title-sm mt-3 text-foreground">
-            Request a campaign pilot.
+            Let&apos;s build something that performs.
           </h2>
           <p className="body-text mt-4 text-[15px] text-foreground-muted">
             Tell us about your brand and budget — we&apos;ll come back with a

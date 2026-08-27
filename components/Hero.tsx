@@ -3,31 +3,35 @@ import React from "react";
 import { motion, useReducedMotion } from "motion/react";
 import { ArrowUpRight, MessageCircle } from "lucide-react";
 
+const CAPABILITIES = ["Talent Management", "Influencer Marketing", "UGC Studio", "ROI Attribution"];
+
 export function Hero() {
   const shouldReduceMotion = useReducedMotion();
 
   return (
-    <section className="text-center pt-24 pb-20 max-w-4xl mx-auto">
+    <section className="text-center pt-28 pb-24 max-w-4xl mx-auto">
       <motion.div
         initial={{ opacity: 0, y: shouldReduceMotion ? 0 : 15 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ type: "spring", bounce: 0, duration: 0.5 }}
       >
-        {/* Service Badge */}
-        <div className="inline-flex items-center gap-2 apple-glass px-4 py-1.5 rounded-full text-xs font-medium text-foreground-muted mb-8">
-          <span className="h-1.5 w-1.5 rounded-full bg-white" />
-          <span>Influencer Marketing • Talent Management • UGC Studio</span>
-        </div>
+        {/* Eyebrow */}
+        <p className="eyebrow-text text-foreground-muted mb-6">
+          Creator Marketing &amp; Talent Management — Bengaluru
+        </p>
 
-        {/* Display Headline */}
+        {/* Display Headline — states what Decibel is and what makes it
+            different in two short clauses, one accent word doing the work. */}
         <h1 className="display-title font-semibold text-white">
-          <span className="text-foreground-muted">Creator marketing,</span> <br />
-          engineered for brand growth.
+          <span className="text-foreground-muted">Creators, managed.</span> <br />
+          Campaigns, <span className="text-accent">measured</span>.
         </h1>
 
-        {/* Subhead with UGC and Influencer Agency Positioning */}
+        {/* Subhead */}
         <p className="body-text text-base md:text-lg text-foreground-muted max-w-2xl mx-auto mt-6 leading-relaxed">
-          Decibel is a dedicated creator marketing and talent agency. We engineer high-converting creator campaigns, authentic UGC production, and verified performance attribution for modern brands.
+          Decibel represents creators and runs the campaigns built around them —
+          from talent negotiation to UGC production to verified attribution,
+          under one roof.
         </p>
       </motion.div>
 
@@ -56,6 +60,21 @@ export function Hero() {
           <MessageCircle size={16} />
           Chat on WhatsApp
         </motion.a>
+      </motion.div>
+
+      {/* Capability strip — states the full scope in one glance, no paragraph required. */}
+      <motion.div
+        className="mt-14 flex flex-wrap items-center justify-center gap-x-6 gap-y-3"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.3, duration: 0.5 }}
+      >
+        {CAPABILITIES.map((label, i) => (
+          <React.Fragment key={label}>
+            {i > 0 && <span className="hidden h-1 w-1 rounded-full bg-foreground-muted/40 sm:block" aria-hidden="true" />}
+            <span className="eyebrow-text text-foreground-muted/80">{label}</span>
+          </React.Fragment>
+        ))}
       </motion.div>
     </section>
   );
