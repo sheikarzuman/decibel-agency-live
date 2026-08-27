@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { SiteBackground } from "@/components/SiteBackground";
 import "./globals.css";
 
 const SITE_TITLE = "Decibel | Influencer Marketing & UGC Agency";
@@ -43,6 +44,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className="h-full antialiased">
       <body className="min-h-full flex flex-col bg-background text-foreground">
+        <SiteBackground />
         {children}
       </body>
     </html>

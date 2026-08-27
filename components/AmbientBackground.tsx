@@ -55,7 +55,7 @@ function ParticleField({ interactive, reduced }: { interactive: boolean; reduced
       target.current.y = (e.clientY / window.innerHeight) * 2 - 1;
     };
     // Listens on window (not the canvas) — the canvas stays pointer-events:none
-    // so it never steals clicks/taps from the Hero's own links and buttons.
+    // so it never steals clicks/taps from the site's own links and buttons.
     window.addEventListener("pointermove", handlePointerMove, { passive: true });
     return () => window.removeEventListener("pointermove", handlePointerMove);
   }, [interactive]);
@@ -96,7 +96,7 @@ function ParticleField({ interactive, reduced }: { interactive: boolean; reduced
   );
 }
 
-/** Decorative-only: if WebGL init fails for any reason, render nothing rather than break the Hero. */
+/** Decorative-only: if WebGL init fails for any reason, render nothing rather than break the page. */
 class SilentErrorBoundary extends React.Component<{ children: React.ReactNode }, { failed: boolean }> {
   state = { failed: false };
   static getDerivedStateFromError() {
@@ -107,13 +107,13 @@ class SilentErrorBoundary extends React.Component<{ children: React.ReactNode },
   }
 }
 
-export default function HeroBackground() {
+export default function AmbientBackground() {
   const reduced = Boolean(useReducedMotion());
   const finePointer = useFinePointer();
   const interactive = finePointer && !reduced;
 
   return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
+    <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none" aria-hidden="true">
       <SilentErrorBoundary>
         <Canvas
           dpr={[1, 1.5]}
