@@ -53,6 +53,15 @@ const CREATORS = [
     category: "Fashion • Lifestyle • Visuals",
     location: "Coimbatore",
     bio: "Creating high-impact fashion edits, everyday aesthetic style, and engaging lifestyle storytelling for forward-thinking brands."
+  },
+  {
+    name: "Oshin Gyati",
+    handle: "@oshingyati",
+    image: "/oshin.jpg",
+    url: "https://www.instagram.com/oshingyati/",
+    category: "Fashion • Lifestyle • Beauty",
+    location: "Bengaluru",
+    bio: "Crafting polished fashion moments, refined style edits, and elevated lifestyle content for premium consumer brands."
   }
 ];
 
