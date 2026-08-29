@@ -62,6 +62,15 @@ const CREATORS = [
     category: "Fashion • Lifestyle • Beauty",
     location: "Bengaluru",
     bio: "Crafting polished fashion moments, refined style edits, and elevated lifestyle content for premium consumer brands."
+  },
+  {
+    name: "Jannath",
+    handle: "@kumbattingaaa",
+    image: "/jannat.jpg",
+    url: "https://www.instagram.com/kumbattingaaa/",
+    category: "Comedy • Entertainment • Lifestyle",
+    location: "Malappuram",
+    bio: "Serving up witty skits, relatable humor, and offbeat everyday moments that turn casual scrolling into laugh-out-loud engagement for brands that don't take themselves too seriously."
   }
 ];
 
