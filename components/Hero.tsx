@@ -1,17 +1,22 @@
 "use client";
 import React from "react";
-import { motion, useReducedMotion } from "motion/react";
+import { motion } from "motion/react";
 import { ArrowUpRight, MessageCircle } from "lucide-react";
+import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 
 const CAPABILITIES = ["Talent Management", "Influencer Marketing", "UGC Studio", "ROI Attribution"];
 
 export function Hero() {
-  const shouldReduceMotion = useReducedMotion();
+  // See hooks/usePrefersReducedMotion.ts — motion/react's own
+  // useReducedMotion() can resolve to the client's true value before
+  // hydration reconciles, which throws a real hydration-mismatch error the
+  // moment it's fed into an `initial` value like this one.
+  const prefersReducedMotion = usePrefersReducedMotion();
 
   return (
     <section className="text-center pt-28 pb-24 max-w-4xl mx-auto">
       <motion.div
-        initial={{ opacity: 0, y: shouldReduceMotion ? 0 : 15 }}
+        initial={{ opacity: 0, y: prefersReducedMotion ? 0 : 15 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ type: "spring", bounce: 0, duration: 0.5 }}
       >

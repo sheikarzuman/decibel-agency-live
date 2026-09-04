@@ -5,6 +5,7 @@ import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
 import { Navbar } from "@/components/Navbar";
 import { Performance } from "@/components/Performance";
+import { ScrollVideoHero } from "@/components/ScrollVideoHero";
 import { Services } from "@/components/Services";
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <Navbar />
       <main className="relative">
         <Hero />
+        <ScrollVideoHero />
         <Services />
         <CreatorRoster />
         <Performance />
