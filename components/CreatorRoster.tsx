@@ -62,6 +62,42 @@ const CREATORS = [
     category: "Comedy • Entertainment • Lifestyle",
     location: "Malappuram",
     bio: "Serving up witty skits, relatable humor, and offbeat everyday moments that turn casual scrolling into laugh-out-loud engagement for brands that don't take themselves too seriously."
+  },
+  {
+    name: "Vamshika",
+    handle: "@vamshika_jadav",
+    image: "/vamshika.jpg",
+    url: "https://www.instagram.com/vamshika_jadav",
+    category: "Fashion • Lifestyle",
+    location: "",
+    bio: ""
+  },
+  {
+    name: "Medha",
+    handle: "@medhareddymula",
+    image: "/medha.jpg",
+    url: "https://www.instagram.com/medhareddymula",
+    category: "Fashion • Lifestyle",
+    location: "",
+    bio: ""
+  },
+  {
+    name: "Thrisha",
+    handle: "@chandru_mavals",
+    image: "/thrisha.jpg",
+    url: "https://www.instagram.com/chandru_mavals",
+    category: "Fashion • Lifestyle",
+    location: "",
+    bio: ""
+  },
+  {
+    name: "Jayavarshini",
+    handle: "@chandru_mavals",
+    image: "/jayavarshini.jpg",
+    url: "https://www.instagram.com/chandru_mavals",
+    category: "Fashion • Lifestyle",
+    location: "",
+    bio: ""
   }
 ];
 
