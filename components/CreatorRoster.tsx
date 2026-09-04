@@ -68,9 +68,9 @@ const CREATORS = [
     handle: "@vamshika_jadav",
     image: "/vamshika.jpg",
     url: "https://www.instagram.com/vamshika_jadav",
-    category: "Fashion • Lifestyle",
+    category: "Fashion • Lifestyle • Styling",
     location: "",
-    bio: ""
+    bio: "Crafting moody, texture-rich styling edits and everyday fashion moments with an eye for earthy, editorial tones."
   },
   {
     name: "Medha",
@@ -79,25 +79,25 @@ const CREATORS = [
     url: "https://www.instagram.com/medhareddymula",
     category: "Fashion • Lifestyle",
     location: "",
-    bio: ""
+    bio: "Bringing elevated, contemporary styling to life through rich textures and after-dark editorial moments."
   },
   {
     name: "Thrisha",
     handle: "@chandru_mavals",
     image: "/thrisha.jpg",
     url: "https://www.instagram.com/chandru_mavals",
-    category: "Fashion • Lifestyle",
+    category: "Fashion • Lifestyle • Travel",
     location: "",
-    bio: ""
+    bio: "Framing effortless outdoor style and travel-ready looks against lush, editorial backdrops for brands that love a breath of fresh air."
   },
   {
     name: "Jayavarshini",
     handle: "@chandru_mavals",
     image: "/jayavarshini.jpg",
     url: "https://www.instagram.com/chandru_mavals",
-    category: "Fashion • Lifestyle",
+    category: "Fashion • Lifestyle • Aesthetic",
     location: "",
-    bio: ""
+    bio: "Delivering moody, cinematic portraits and edgy styling with a nostalgic pop-culture edge that stops the scroll."
   }
 ];
 
@@ -127,7 +127,7 @@ function CreatorCard({ creator, index }: { creator: (typeof CREATORS)[number]; i
           {/* Editorial name treatment — set directly into the image via a
               gradient, not a separate caption block underneath it. */}
           <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent px-5 pb-5 pt-16">
-            <p className="eyebrow-text text-white/70">{creator.location}</p>
+            {creator.location && <p className="eyebrow-text text-white/70">{creator.location}</p>}
             <h3 className="mt-1 text-2xl font-semibold tracking-tight text-white">{creator.name}</h3>
             <p className="mt-1 text-xs font-medium text-white/70">{creator.category}</p>
           </div>
