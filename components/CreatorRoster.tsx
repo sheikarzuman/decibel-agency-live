@@ -98,6 +98,15 @@ const CREATORS = [
     category: "Fashion • Lifestyle • Aesthetic",
     location: "",
     bio: "Delivering moody, cinematic portraits and edgy styling with a nostalgic pop-culture edge that stops the scroll."
+  },
+  {
+    name: "Samiksha",
+    handle: "@samiksha_2211",
+    image: "/samiksha.jpg",
+    url: "https://www.instagram.com/samiksha_2211/",
+    category: "Fashion • Beauty",
+    location: "",
+    bio: "Bringing polished glam and after-dark elegance to life through rich textures, statement jewelry, and editorial beauty moments."
   }
 ];
 
