@@ -28,6 +28,15 @@ function InstagramIcon({ size = 16, className }: { size?: number; className?: st
 
 const CREATORS = [
   {
+    name: "Relatable AI",
+    handle: "@therelatableai",
+    image: "/relatableai.jpg",
+    url: "https://www.instagram.com/therelatableai/",
+    category: "Comedy • Entertainment",
+    location: "Chennai",
+    bio: "Turning everyday relatable chaos into scroll-stopping duo comedy, sharp banter, and laugh-out-loud moments for brands that don't take themselves too seriously."
+  },
+  {
     name: "Gagana",
     handle: "@gagana._xo",
     image: "/gagana.jpg",
