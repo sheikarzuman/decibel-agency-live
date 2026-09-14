@@ -205,8 +205,12 @@ export function CreatorRoster() {
 
       {/* Horizontal editorial gallery — scroll-snapped, full-bleed to the
           viewport edge, wide enough on desktop to feel like flipping through
-          a lookbook rather than scanning a grid. */}
-      <div className="hide-scrollbar mt-12 flex snap-x snap-mandatory gap-6 overflow-x-auto px-6 pb-4 sm:justify-center">
+          a lookbook rather than scanning a grid.
+          No justify-center here: with enough cards to overflow the
+          viewport, a centered flex row makes browsers start the scroll
+          position mid-content instead of at card 1 — Relatable AI and
+          Akshara would land off-screen to the left on load. */}
+      <div className="hide-scrollbar mt-12 flex snap-x snap-mandatory gap-6 overflow-x-auto px-6 pb-4">
         {CREATORS.map((creator, i) => (
           <CreatorCard key={creator.handle} creator={creator} index={i} />
         ))}
