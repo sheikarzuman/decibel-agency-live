@@ -37,6 +37,15 @@ const CREATORS = [
     bio: "Turning everyday relatable chaos into scroll-stopping duo comedy, sharp banter, and laugh-out-loud moments for brands that don't take themselves too seriously."
   },
   {
+    name: "Akshara Indhu",
+    handle: "@akshara.indhu",
+    image: "/akshara.jpg",
+    url: "https://www.instagram.com/akshara.indhu/",
+    category: "Fashion • Lifestyle • Beauty",
+    location: "",
+    bio: "Bringing timeless ethnic elegance to life through rich gold jewelry, traditional silhouettes, and warm, festive beauty moments for brands rooted in heritage and celebration."
+  },
+  {
     name: "Gagana",
     handle: "@gagana._xo",
     image: "/gagana.jpg",
