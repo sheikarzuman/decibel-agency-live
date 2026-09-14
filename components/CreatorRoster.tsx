@@ -28,6 +28,15 @@ function InstagramIcon({ size = 16, className }: { size?: number; className?: st
 
 const CREATORS = [
   {
+    name: "Relatable AI",
+    handle: "@therelatableai",
+    image: "/relatableai.jpg",
+    url: "https://www.instagram.com/therelatableai/",
+    category: "Comedy • Entertainment",
+    location: "Chennai",
+    bio: "Turning everyday relatable chaos into scroll-stopping duo comedy, sharp banter, and laugh-out-loud moments for brands that don't take themselves too seriously."
+  },
+  {
     name: "Akshara Indhu",
     handle: "@akshara.indhu",
     image: "/akshara.jpg",
@@ -71,15 +80,6 @@ const CREATORS = [
     category: "Comedy • Entertainment • Lifestyle",
     location: "Malappuram",
     bio: "Serving up witty skits, relatable humor, and offbeat everyday moments that turn casual scrolling into laugh-out-loud engagement for brands that don't take themselves too seriously."
-  },
-  {
-    name: "Relatable AI",
-    handle: "@therelatableai",
-    image: "/relatableai.jpg",
-    url: "https://www.instagram.com/therelatableai/",
-    category: "Comedy • Entertainment",
-    location: "Chennai",
-    bio: "Turning everyday relatable chaos into scroll-stopping duo comedy, sharp banter, and laugh-out-loud moments for brands that don't take themselves too seriously."
   },
   {
     name: "Gagana",
