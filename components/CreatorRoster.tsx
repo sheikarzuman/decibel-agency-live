@@ -28,15 +28,6 @@ function InstagramIcon({ size = 16, className }: { size?: number; className?: st
 
 const CREATORS = [
   {
-    name: "Relatable AI",
-    handle: "@therelatableai",
-    image: "/relatableai.jpg",
-    url: "https://www.instagram.com/therelatableai/",
-    category: "Comedy • Entertainment",
-    location: "Chennai",
-    bio: "Turning everyday relatable chaos into scroll-stopping duo comedy, sharp banter, and laugh-out-loud moments for brands that don't take themselves too seriously."
-  },
-  {
     name: "Akshara Indhu",
     handle: "@akshara.indhu",
     image: "/akshara.jpg",
@@ -44,6 +35,51 @@ const CREATORS = [
     category: "Fashion • Lifestyle • Beauty",
     location: "",
     bio: "Bringing timeless ethnic elegance to life through rich gold jewelry, traditional silhouettes, and warm, festive beauty moments for brands rooted in heritage and celebration."
+  },
+  {
+    name: "Samiksha",
+    handle: "@samiksha_2211",
+    image: "/samiksha.jpg",
+    url: "https://www.instagram.com/samiksha_2211/",
+    category: "Fashion • Beauty",
+    location: "",
+    bio: "Bringing polished glam and after-dark elegance to life through rich textures, statement jewelry, and editorial beauty moments."
+  },
+  {
+    name: "Vamshika",
+    handle: "@vamshika_jadav",
+    image: "/vamshika.jpg",
+    url: "https://www.instagram.com/vamshika_jadav",
+    category: "Fashion • Lifestyle • Styling",
+    location: "",
+    bio: "Crafting moody, texture-rich styling edits and everyday fashion moments with an eye for earthy, editorial tones."
+  },
+  {
+    name: "Medha",
+    handle: "@medhareddymula",
+    image: "/medha.jpg",
+    url: "https://www.instagram.com/medhareddymula",
+    category: "Fashion • Lifestyle",
+    location: "",
+    bio: "Bringing elevated, contemporary styling to life through rich textures and after-dark editorial moments."
+  },
+  {
+    name: "Jannath",
+    handle: "@kumbattingaaa",
+    image: "/jannat.jpg",
+    url: "https://www.instagram.com/kumbattingaaa/",
+    category: "Comedy • Entertainment • Lifestyle",
+    location: "Malappuram",
+    bio: "Serving up witty skits, relatable humor, and offbeat everyday moments that turn casual scrolling into laugh-out-loud engagement for brands that don't take themselves too seriously."
+  },
+  {
+    name: "Relatable AI",
+    handle: "@therelatableai",
+    image: "/relatableai.jpg",
+    url: "https://www.instagram.com/therelatableai/",
+    category: "Comedy • Entertainment",
+    location: "Chennai",
+    bio: "Turning everyday relatable chaos into scroll-stopping duo comedy, sharp banter, and laugh-out-loud moments for brands that don't take themselves too seriously."
   },
   {
     name: "Gagana",
@@ -73,33 +109,6 @@ const CREATORS = [
     bio: "Creating high-impact fashion edits, everyday aesthetic style, and engaging lifestyle storytelling for forward-thinking brands."
   },
   {
-    name: "Jannath",
-    handle: "@kumbattingaaa",
-    image: "/jannat.jpg",
-    url: "https://www.instagram.com/kumbattingaaa/",
-    category: "Comedy • Entertainment • Lifestyle",
-    location: "Malappuram",
-    bio: "Serving up witty skits, relatable humor, and offbeat everyday moments that turn casual scrolling into laugh-out-loud engagement for brands that don't take themselves too seriously."
-  },
-  {
-    name: "Vamshika",
-    handle: "@vamshika_jadav",
-    image: "/vamshika.jpg",
-    url: "https://www.instagram.com/vamshika_jadav",
-    category: "Fashion • Lifestyle • Styling",
-    location: "",
-    bio: "Crafting moody, texture-rich styling edits and everyday fashion moments with an eye for earthy, editorial tones."
-  },
-  {
-    name: "Medha",
-    handle: "@medhareddymula",
-    image: "/medha.jpg",
-    url: "https://www.instagram.com/medhareddymula",
-    category: "Fashion • Lifestyle",
-    location: "",
-    bio: "Bringing elevated, contemporary styling to life through rich textures and after-dark editorial moments."
-  },
-  {
     name: "Thrisha",
     handle: "@chandru_mavals",
     image: "/thrisha.jpg",
@@ -116,15 +125,6 @@ const CREATORS = [
     category: "Fashion • Lifestyle • Aesthetic",
     location: "",
     bio: "Delivering moody, cinematic portraits and edgy styling with a nostalgic pop-culture edge that stops the scroll."
-  },
-  {
-    name: "Samiksha",
-    handle: "@samiksha_2211",
-    image: "/samiksha.jpg",
-    url: "https://www.instagram.com/samiksha_2211/",
-    category: "Fashion • Beauty",
-    location: "",
-    bio: "Bringing polished glam and after-dark elegance to life through rich textures, statement jewelry, and editorial beauty moments."
   }
 ];
 
