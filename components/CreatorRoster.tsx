@@ -43,7 +43,7 @@ const CREATORS = [
     url: "https://www.instagram.com/akshara.indhu/",
     category: "Fashion • Lifestyle • Beauty",
     location: "",
-    bio: "Bringing timeless ethnic elegance to life through rich gold jewelry, traditional silhouettes, and warm, festive beauty moments for brands rooted in heritage and celebration."
+    bio: "Bringing timeless ethnic elegance to life through traditional silhouettes and warm, festive beauty moments for brands rooted in heritage and celebration."
   },
   {
     name: "Samiksha",
