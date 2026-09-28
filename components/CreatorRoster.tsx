@@ -125,6 +125,15 @@ const CREATORS = [
     category: "Fashion • Lifestyle • Aesthetic",
     location: "",
     bio: "Delivering moody, cinematic portraits and edgy styling with a nostalgic pop-culture edge that stops the scroll."
+  },
+  {
+    name: "Greeshma Pillai",
+    handle: "@greeshma_pillai01",
+    image: "/greeshma.jpg",
+    url: "https://www.instagram.com/greeshma_pillai01/",
+    category: "Fashion • Lifestyle • Portraits",
+    location: "",
+    bio: "Capturing warm, golden-hour portraits and minimal, confident styling with a soft editorial glow."
   }
 ];
 
