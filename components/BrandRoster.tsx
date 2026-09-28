@@ -45,10 +45,10 @@ function BrandTile({ brand, index }: { brand: Brand; index: number }) {
       className="apple-glass group flex items-center justify-center rounded-3xl p-5 transition-transform duration-300 hover:-translate-y-1 sm:p-6"
     >
       {/* Source logos vary wildly in native background (some ship on white,
-          some on black) — a uniform white chip, the same treatment Navbar.tsx
-          already uses for the Decibel wordmark, normalizes all of them into
-          one consistent "logo wall" tile instead of branching per-asset. */}
-      <div className="flex h-16 w-full items-center justify-center overflow-hidden rounded-2xl bg-white px-5 transition-transform duration-300 group-hover:scale-[1.03] sm:h-20 sm:px-6">
+          some on black) — a uniform black chip, matching the section's dark
+          theme, normalizes all of them into one consistent "logo wall" tile
+          instead of branching per-asset. */}
+      <div className="flex h-16 w-full items-center justify-center overflow-hidden rounded-2xl bg-black px-5 transition-transform duration-300 group-hover:scale-[1.03] sm:h-20 sm:px-6">
         {brand.logo ? (
           <div className="relative h-9 w-full sm:h-11">
             <Image
@@ -60,7 +60,7 @@ function BrandTile({ brand, index }: { brand: Brand; index: number }) {
             />
           </div>
         ) : (
-          <span className="text-lg font-bold tracking-tight text-black sm:text-xl">
+          <span className="text-lg font-bold tracking-tight text-white sm:text-xl">
             {brand.name}
           </span>
         )}
