@@ -17,8 +17,8 @@ const BRANDS: Brand[] = [
   { name: "Spotify", logo: "/spotify-logo.webp" },
   { name: "Uber", logo: "/uber-logo.webp" },
   { name: "Samsung", logo: "/samsung-logo.png" },
-  { name: "Amazon", logo: "/amazon-logo.jpg" },
-  { name: "Skin Inspired", logo: "/skin-inspired-logo.jpeg" },
+  { name: "Amazon", logo: "/amazon-logo.png" },
+  { name: "Skin Inspired", logo: "/skin-inspired-logo.png" },
   { name: "POP Club" },
 ];
 
