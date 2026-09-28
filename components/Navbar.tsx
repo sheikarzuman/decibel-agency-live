@@ -10,6 +10,7 @@ const MotionLink = motion.create(Link);
 const NAV_LINKS = [
   { href: "#services", label: "Services" },
   { href: "#roster", label: "Talent" },
+  { href: "#brands", label: "Brands" },
   { href: "#performance-data", label: "Performance" },
   { href: "#about", label: "About" },
 ];

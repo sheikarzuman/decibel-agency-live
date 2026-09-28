@@ -1,4 +1,5 @@
 import { About } from "@/components/About";
+import { BrandRoster } from "@/components/BrandRoster";
 import { Contact } from "@/components/Contact";
 import { CreatorRoster } from "@/components/CreatorRoster";
 import { Footer } from "@/components/Footer";
@@ -17,6 +18,7 @@ export default function Home() {
         <ScrollVideoHero />
         <Services />
         <CreatorRoster />
+        <BrandRoster />
         <Performance />
         <About />
         <Contact />
